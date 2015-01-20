@@ -21,8 +21,9 @@
 	* [快速回弹滚动](#overflow-scrolling)
 	* [手机号码识别](#tel)
 	* [邮箱地址识别](#email)
-	* [关闭iOS中键盘自动大写](#autocapitalize)
-	* [关闭iOS中输入自动修正](#autocorrect)
+	* [关闭iOS键盘首字母自动大写](#autocapitalize)
+	* [关闭iOS输入自动修正](#autocorrect)
+	* [禁止文本缩放](#text-size-adjust)
 * 待续...
 
 <a name="compatibility"></a>
@@ -134,7 +135,7 @@
 	```
 	
 <a name="autocapitalize"></a>
-### 关闭iOS中键盘自动大写
+### 关闭iOS键盘首字母自动大写
 
 在iOS中，默认情况下键盘是开启首字母大写的功能的，如果业务不想出现首字母大写，可以这样：
 
@@ -147,14 +148,26 @@
 	```
 	
 <a name="autocorrect"></a>
-### 关闭iOS中输入自动修正
+### 关闭iOS输入自动修正
 
 在iOS中，默认输入法会开启自动修正输入内容的功能，如果不需要的话，可以这样：
 
 	```
 	<input type="text" autocorrect="off" />
 	```
+
+<a name="text-size-adjust"></a>
+### 禁止文本缩放
+
+当移动设备横竖屏切换时，文本的大小会重新计算，进行相应的缩放，当我们不需要这种情况时，可以选择禁止：
+
+	```
+	html {
+		-webkit-text-size-adjust: 100%;
+	}
+	```
 	
+> 需要注意的是，PC端的该属性已经被移除，该属性在移动端要生效，必须设置 `meta viewport'
 	
 	
 	
