@@ -17,6 +17,7 @@
 * [经验](#experience)
 	* [禁止保存或拷贝图像](#touch-callout)
 	* [取消touch高亮](#tap-highlight-color)
+	* [禁止选中内容](#user-select)
 * 待续...
 
 <a name="compatibility"></a>
@@ -43,7 +44,7 @@
 		-webkit-touch-callout: none;
 	}
 
-需要注意的是，该方法只在 `iOS` 上有效。
+> 需要注意的是，该方法只在 `iOS` 上有效。
 
 <a name="tap-highlight-color"></a>
 ### 取消touch高亮
@@ -52,4 +53,13 @@
 
 	.xxx {
 		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	}
+	
+<a name="user-select"></a>
+### 禁止选中内容
+
+如果你不想用户可以选中页面中的内容，那么你可以禁掉：
+
+	html {
+		-webkit-user-select: none;
 	}
