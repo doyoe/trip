@@ -18,6 +18,7 @@
 	* [禁止保存或拷贝图像](#touch-callout)
 	* [取消touch高亮](#tap-highlight-color)
 	* [禁止选中内容](#user-select)
+	* [快速回弹滚动](#overflow-scrolling)
 * 待续...
 
 <a name="compatibility"></a>
@@ -63,3 +64,19 @@
 	html {
 		-webkit-user-select: none;
 	}
+	
+<a name="overflow-scrolling"></a>
+### 快速回弹滚动
+
+1. 早期的时候，移动端的浏览器都不支持非body元素的滚动条，所以一般都借助 iScroll;
+2. Android 3.0/iOS解决了非body元素的滚动问题，但滚动条不可见，同时iOS上只能通过2个手指进行滚动；
+3. Android 4.0解决了滚动条不可见及增加了快速回弹滚动效果，不过随后这个特性又被移除；
+4. iOS从5.0开始解决了滚动条不可见及增加了快速回弹滚动效果
+
+在iOS上如果你想让一个元素拥有像 Native 的滚动效果，你可以这样做：
+```
+	.xxx {
+		overflow: auto; /* auto | scroll */
+		-webkit-overflow-scrolling: touch;
+	}
+```
