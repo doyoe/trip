@@ -46,9 +46,11 @@
 
 通常当你在手机或者pad上长按图像 `img` ，会弹出选项 `存储图像` 或者 `拷贝图像`，如果你不想让用户这么操作，那么你可以通过以下方法来禁止：
 
-	img {
-		-webkit-touch-callout: none;
-	}
+```
+img {
+	-webkit-touch-callout: none;
+}
+```
 
 > 需要注意的是，该方法只在 `iOS` 上有效。
 
@@ -57,18 +59,22 @@
 
 在移动设备上，所有设置了伪类 `:active` 的元素，默认都会在激活状态时，显示高亮框，如果不想要这个高亮，那么你可以通过以下方法来禁止：
 
-	.xxx {
-		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-	}
+```
+.xxx {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+```
 	
 <a name="user-select"></a>
 ### 禁止选中内容
 
 如果你不想用户可以选中页面中的内容，那么你可以禁掉：
 
-	html {
-		-webkit-user-select: none;
-	}
+```
+html {
+	-webkit-user-select: none;
+}
+```
 	
 <a name="overflow-scrolling"></a>
 ### 快速回弹滚动
@@ -80,12 +86,12 @@
 
 在iOS上如果你想让一个元素拥有像 Native 的滚动效果，你可以这样做：
 
-	```
-	.xxx {
-		overflow: auto; /* auto | scroll */
-		-webkit-overflow-scrolling: touch;
-	}
-	```
+```
+.xxx {
+	overflow: auto; /* auto | scroll */
+	-webkit-overflow-scrolling: touch;
+}
+```
 
 <a name="tel"></a>
 ### 手机号码识别
@@ -101,21 +107,21 @@
 
 1. 关闭电话识别：
 
-	```
-	<meta name="format-detection" content="telephone=no" />
-	```
+```
+<meta name="format-detection" content="telephone=no" />
+```
 
 2. 开启电话功能：
 
-	```
-	<a href="tel:123456">123456</a>
-	```
+```
+<a href="tel:123456">123456</a>
+```
 	
 3. 开启短信功能：
 
-	```
-	<a href="sms:123456">123456</a>
-	```
+```
+<a href="sms:123456">123456</a>
+```
 	
 <a name="email"></a>
 ### 邮箱地址识别
@@ -124,48 +130,38 @@
 
 1. 关闭邮箱地址识别：
 
-	```
-	<meta name="format-detection" content="email=no" />
-	```
+```
+<meta name="format-detection" content="email=no" />
+```
 	
 2. 开启邮件发送：
 
-	```
-	<a mailto:dooyoe@gmail.com">dooyoe@gmail.com</a>
-	```
+```
+<a mailto:dooyoe@gmail.com">dooyoe@gmail.com</a>
+```	
 	
 <a name="autocapitalize"></a>
 ### 关闭iOS键盘首字母自动大写
 
 在iOS中，默认情况下键盘是开启首字母大写的功能的，如果业务不想出现首字母大写，可以这样：
 
-	```
 	<input type="text" autocapitalize="off" />
-	```
-	
-	```
-	<a mailto:dooyoe@gmail.com">dooyoe@gmail.com</a>
-	```
 	
 <a name="autocorrect"></a>
 ### 关闭iOS输入自动修正
 
 在iOS中，默认输入法会开启自动修正输入内容的功能，如果不需要的话，可以这样：
 
-	```
 	<input type="text" autocorrect="off" />
-	```
 
 <a name="text-size-adjust"></a>
 ### 禁止文本缩放
 
 当移动设备横竖屏切换时，文本的大小会重新计算，进行相应的缩放，当我们不需要这种情况时，可以选择禁止：
 
-	```
 	html {
 		-webkit-text-size-adjust: 100%;
 	}
-	```
 	
 > 需要注意的是，PC端的该属性已经被移除，该属性在移动端要生效，必须设置 `meta viewport'
 	
