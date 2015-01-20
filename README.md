@@ -24,6 +24,7 @@
 	* [关闭iOS键盘首字母自动大写](#autocapitalize)
 	* [关闭iOS输入自动修正](#autocorrect)
 	* [禁止文本缩放](#text-size-adjust)
+	* [清除输入框内阴影](#input-shadow)
 * 待续...
 
 <a name="compatibility"></a>
@@ -145,30 +146,46 @@ html {
 
 在iOS中，默认情况下键盘是开启首字母大写的功能的，如果业务不想出现首字母大写，可以这样：
 
-	<input type="text" autocapitalize="off" />
+```
+<input type="text" autocapitalize="off" />
+```
 	
 <a name="autocorrect"></a>
 ### 关闭iOS输入自动修正
 
 在iOS中，默认输入法会开启自动修正输入内容的功能，如果不需要的话，可以这样：
 
-	<input type="text" autocorrect="off" />
+```
+<input type="text" autocorrect="off" />
+```
 
 <a name="text-size-adjust"></a>
 ### 禁止文本缩放
 
 当移动设备横竖屏切换时，文本的大小会重新计算，进行相应的缩放，当我们不需要这种情况时，可以选择禁止：
 
-	html {
-		-webkit-text-size-adjust: 100%;
-	}
+```
+html {
+	-webkit-text-size-adjust: 100%;
+}
+```
 	
 > 需要注意的是，PC端的该属性已经被移除，该属性在移动端要生效，必须设置 `meta viewport'
-	
-	
-	
-	
-	
+
+<a name="input-shadow"></a>
+### 清除输入框内阴影
+
+在iOS上，输入框默认有内部阴影，但无法使用 `box-shadow` 来清除，如果不需要阴影，可以这样关闭：
+
+```
+input,
+textarea {
+	border: 0; /* 方法1 */
+	-webkit-appearance: none; /* 方法2 */
+}
+```
+
+
 	
 	
 	
