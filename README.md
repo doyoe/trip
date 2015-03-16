@@ -25,6 +25,7 @@
 	* [关闭iOS输入自动修正](#autocorrect)
 	* [禁止文本缩放](#text-size-adjust)
 	* [清除输入框内阴影](#input-shadow)
+	* [Samsung S4圆角Bug](#s4-radius)
 * 待续...
 
 <a name="compatibility"></a>
@@ -65,7 +66,7 @@ img {
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 ```
-	
+
 <a name="user-select"></a>
 ### 禁止选中内容
 
@@ -76,7 +77,7 @@ html {
 	-webkit-user-select: none;
 }
 ```
-	
+
 <a name="overflow-scrolling"></a>
 ### 快速回弹滚动
 
@@ -117,13 +118,13 @@ html {
 ```
 <a href="tel:123456">123456</a>
 ```
-	
+
 3. 开启短信功能：
 
 ```
 <a href="sms:123456">123456</a>
 ```
-	
+
 <a name="email"></a>
 ### 邮箱地址识别
 
@@ -134,13 +135,13 @@ html {
 ```
 <meta name="format-detection" content="email=no" />
 ```
-	
+
 2. 开启邮件发送：
 
 ```
 <a mailto:dooyoe@gmail.com">dooyoe@gmail.com</a>
-```	
-	
+```
+
 <a name="autocapitalize"></a>
 ### 关闭iOS键盘首字母自动大写
 
@@ -149,7 +150,7 @@ html {
 ```
 <input type="text" autocapitalize="off" />
 ```
-	
+
 <a name="autocorrect"></a>
 ### 关闭iOS输入自动修正
 
@@ -169,7 +170,7 @@ html {
 	-webkit-text-size-adjust: 100%;
 }
 ```
-	
+
 > 需要注意的是，PC端的该属性已经被移除，该属性在移动端要生效，必须设置 `meta viewport'
 
 <a name="input-shadow"></a>
@@ -185,10 +186,33 @@ textarea {
 }
 ```
 
+<a name="s4-radius"></a>
+### Samsung S4圆角Bug
+
+`Samsung S4` 手机在 `Android 4.4.2` 的 `Android Browser` 上，如果你使用了 `border-radius`，并且使用了 `trasnform` 属性，那么某些情况下，圆角会出现问题：
+
+```
+<style>
+.test {
+	border: 2px solid red;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: gray;
+	box-shadow:0 2px 5px rgba(0, 0, 0, 0.3);
+	-webkit-transform: translate(0, 0) translatez(0);
+	transform: translate(0, 0) translatez(0);
+}
+</style>
+<div class="test"></div>
+```
+
+如上代码，`-webkit-transform: translate(0, 0) translatez(0)` 将会导致圆角无法包裹住 `background-color`，当然，`-webkit-transform: translate3d(0, 0, 0)` 也是一样的，所以如果你的某个场景是这样的，那么可以直接使用 `-webkit-transform: translate(0, 0)` 来避免这个问题
+
 待续啊待续。。。
-	
-	
-	
-	
-	
+
+
+
+
+
 
