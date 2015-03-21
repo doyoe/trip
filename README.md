@@ -180,6 +180,12 @@ html {
 <a mailto:dooyoe@gmail.com>dooyoe@gmail.com</a>
 ```
 
+> 如果想同时关闭电话和邮箱识别，可以把它们写到一条 meta 内，代码如下：
+
+```
+<meta name="format-detection" content="telephone=no,email=no" />
+```
+
 <a name="autocapitalize"></a>
 ### 关闭iOS键盘首字母自动大写
 
