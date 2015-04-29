@@ -16,7 +16,7 @@
 	* [CSS伪类:active](#active)
 	* [清除iOS输入框内阴影](#input-shadow)
 	* [Samsung S4圆角Bug](#s4-radius)
-	* [伪元素动画](#pseudo-element-animation)
+	* [不要使用伪元素动画](#pseudo-element-animation)
 * [经验](#experience)
 	* [禁止保存或拷贝图像](#touch-callout)
 	* [取消touch高亮](#tap-highlight-color)
@@ -80,9 +80,9 @@ textarea {
 
 
 <a name="pseudo-element-animation"></a>
-### 伪元素动画
+### 不要使用伪元素动画
 
-
+有的时候你可能会为了减少页面上的DOM数，而使用伪元素。但如果你想给伪元素增加 `animation` 或者 `transition` 动画，这时候会碰上支持性问题。
 
 
 <a name="experience"></a>
