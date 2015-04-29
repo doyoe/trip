@@ -16,6 +16,7 @@
 	* [CSS伪类:active](#active)
 	* [清除iOS输入框内阴影](#input-shadow)
 	* [Samsung S4圆角Bug](#s4-radius)
+	* [伪元素动画](#pseudo-element-animation)
 * [经验](#experience)
 	* [禁止保存或拷贝图像](#touch-callout)
 	* [取消touch高亮](#tap-highlight-color)
@@ -76,6 +77,12 @@ textarea {
 如上代码，`-webkit-transform: translate(0, 0) translatez(0)` 将会导致圆角无法包裹住 `background-color`。
 
 当然，`-webkit-transform: translate3d(0, 0, 0)` 也是一样的，所以如果你的某个场景是这样的，那么可以直接使用 `-webkit-transform: translate(0, 0)` 来避免这个问题。
+
+
+<a name="pseudo-element-animation"></a>
+### 伪元素动画
+
+
 
 
 <a name="experience"></a>
