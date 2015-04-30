@@ -17,6 +17,7 @@
 	* [清除iOS输入框内阴影](#input-shadow)
 	* [Samsung S4圆角Bug](#s4-radius)
 	* [不要使用伪元素动画](#pseudo-element-animation)
+	* [:checked与兄弟选择符一起使用的bug](#checked-sibling-bug)
 * [经验](#experience)
 	* [禁止保存或拷贝图像](#touch-callout)
 	* [取消touch高亮](#tap-highlight-color)
@@ -89,6 +90,9 @@ textarea {
 * iOS6.1及以下
 * Android4.1.*及以下，包括一些深度定制的系统，比如：
     * 魅族 - Flyme OS 4.1.1.1C及以下（比这高的版本尚未测试过）- **咱国产能别这么坑么（安卓版本为4.4.4的魅族MX4 pro）**
+
+<a name="checked-sibling-bug"></a>
+### :checked与兄弟选择符一起使用的bug
 
 
 <a name="experience"></a>
