@@ -87,14 +87,14 @@ textarea {
 
 如果你的项目需要支持以下系统版本，那么建议直接使用真实元素：
 
-* iOS6.1及以下
-* Android4.1.*及以下的 `Android Browser` 上，包括一些深度定制的系统，比如：
+* `iOS6.1及以下` 的 `Safari`
+* `Android4.1.*及以下` 的 `Android Browser` 上，包括一些深度定制的系统，比如：
     * 魅族 - Flyme OS 4.1.1.1C及以下（比这高的版本尚未测试过）- **咱国产能别这么坑么（安卓版本为4.4.4的魅族MX4 pro）**
 
 <a name="checked-sibling-bug"></a>
 ### :checked与兄弟选择符一起使用的bug
 
-在Android Browser4.2.*及以下的 `Android Browser` 上（可能版本稍有出入）（包括坑爹的Flyme），如果你有这样一段代码：
+在 `Android Browser4.2.*及以下` 的 `Android Browser` 上（可能版本稍有出入）（包括坑爹的Flyme），如果你有这样一段代码：
 
 ```
 input:checked ~ .test {
@@ -104,7 +104,7 @@ input:checked ~ .test {
 
 那么将无任何效果，如果你想使得上述代码生效，有2种方式：
 
-第一种：
+第一种，使用 `input` 和 `+` 进行激活：
 
 ```
 html + input {}
@@ -113,7 +113,7 @@ input:checked ~ .test {
 }
 ```
 
-只要存在 `input`和 `+` 选择符的选择器即可使得上述代码生效。
+只要存在 `input`和 `+` 选择符配合使用的选择器（空规则集也行）即可使得上述代码激活生效。
 
 第二种，直接换成 `+`：
 
