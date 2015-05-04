@@ -18,6 +18,7 @@
 	* [Samsung S4圆角Bug](#user-content-s4-radius)
 	* [不要使用伪元素动画](#user-content-pseudo-element-animation)
 	* [:checked与兄弟选择符一起使用的bug](#user-content-checked-sibling-bug)
+	* [为什么flex布局不生效](#user-content-flex)
 * [经验](#user-content-experience)
 	* [禁止保存或拷贝图像](#user-content-touch-callout)
 	* [取消touch高亮](#user-content-tap-highlight-color)
@@ -122,6 +123,10 @@ input:checked + .test {
   background-color: #f00;
 }
 ```
+
+<a name="flex"></a>
+### 为什么flex布局不生效
+
 
 <a name="experience"></a>
 ## 经验
