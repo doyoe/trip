@@ -68,7 +68,7 @@ textarea {
 <a name="s4-radius"></a>
 ### Samsung S4圆角Bug
 
-`Samsung S4` 手机在 `Android 4.4.2` 的 `Android Browser` 上，如果你使用了 `border-radius`，并且使用了 `-webkit-transform` 属性，那么某些情况下，圆角会出现问题：
+`Samsung S4` 手机在 `Android Browser4.4.2` 上（其他版本未测），如果你使用了 `border-radius`，并且使用了 `-webkit-transform` 属性，当使用了 `translatez` 或者 `translate3d` 值，圆角会出现问题：
 
 ```
 <style>
@@ -78,7 +78,7 @@ textarea {
 	height: 50px;
 	border-radius: 50%;
 	background-color: gray;
-	box-shadow:0 2px 5px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
 	-webkit-transform: translate(0, 0) translatez(0);
 	transform: translate(0, 0) translatez(0);
 }
