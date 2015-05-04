@@ -37,9 +37,9 @@
 <a name="active"></a>
 ### CSS伪类:active
 
-如果你想使用元素的伪类来实现激活状态，那么你需要知道以下问题：
+如果你想使用元素的伪类来实现 `按下激活` 状态，那么你需要知道以下问题：
 
-* iOS上的任何浏览器，定义元素的伪类 `:active` 都是无效；
+* iOS上的几乎任何浏览器，定义元素的伪类 `:active` 都是无效；
 * Android上，`Android Browser` 和 `Chrome` 都支持伪类 `:active` ，其它第三方浏览器有部分不支持；
 * 定义了 `:active` 并且当前浏览器环境支持，当手指在滚动或者无意间的划过时，`:active` 状态都会被激活；
 
@@ -48,13 +48,20 @@
 <a name="input-shadow"></a>
 ### 清除输入框内阴影
 
-在iOS上，输入框默认有内部阴影，但无法使用 `box-shadow` 来清除，如果不需要阴影，可以这样关闭：
+iOS上的几乎任何浏览器输入框（input, textarea）默认有内部阴影，但无法使用 `box-shadow` 来清除，如果不需要阴影，可以这样关闭：
 
 ```
 input,
 textarea {
-	border: 0; /* 方法1 */
-	-webkit-appearance: none; /* 方法2 */
+	/* 方法1: 去掉边框 */
+	border: 0;
+
+	/* 方法2: 边框色透明 */
+	border-color: transparent;
+
+	/* 方法3: 重置输入框默认外观 */
+	-webkit-appearance: none;
+	appearance: none;
 }
 ```
 
