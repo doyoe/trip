@@ -127,7 +127,8 @@ input:checked + .test {
 <a name="flex"></a>
 ### 为什么flex布局不生效
 
-* `Android Browser3.0及以下`，`iOS Safari7.1及以下` 的 `flex container（flex容器）` 需要使用[块级元素](http://blog.doyoe.com/2015/03/09/css/%E8%A7%86%E8%A7%89%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%A8%A1%E5%9E%8B%E4%B8%AD%E7%9A%84%E5%90%84%E7%A7%8D%E6%A1%86/#block-level-element)
+* `Android Browser4.2.2及以下`，`iOS Safari6.1及以下` 的 `flex container（flex容器）` 需要使用[块级元素](http://blog.doyoe.com/2015/03/09/css/%E8%A7%86%E8%A7%89%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%A8%A1%E5%9E%8B%E4%B8%AD%E7%9A%84%E5%90%84%E7%A7%8D%E6%A1%86/#block-level-element)
+
 > 如果你发现flex容器设置的宽高不生效，那么仔细看一下flex容器可能是使用了行内级元素；
 
 <a name="experience"></a>
