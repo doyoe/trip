@@ -39,8 +39,11 @@
 
 如果你想使用元素的伪类来实现激活状态，那么你需要知道以下问题：
 
-1. iOS（非PC）上任何元素的伪类 `:active` 都无效；
-2. Android上，`Android Browser` 和 `Chrome` 都支持伪类 `:active` ，其它第三方浏览器基本上都不支持；
+* iOS上的任何浏览器，定义元素的伪类 `:active` 都是无效；
+* Android上，`Android Browser` 和 `Chrome` 都支持伪类 `:active` ，其它第三方浏览器有部分不支持；
+* 定义了 `:active` 并且当前浏览器环境支持，当手指在滚动或者无意间的划过时，`:active` 状态都会被激活；
+
+> 为了规避上述所有的问题，如果需要 `按下激活` 状态，推荐使用 `js` 新增一个 `className`
 
 <a name="input-shadow"></a>
 ### 清除输入框内阴影
