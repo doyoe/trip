@@ -16,6 +16,7 @@
 	* [CSS伪类:active](#user-content-active)
 	* [清除iOS输入框内阴影](#user-content-input-shadow)
 	* [Samsung S4圆角Bug](#user-content-s4-radius)
+	* [边框圆角致背景溢出](#user-content-background-overflow)
 	* [不要使用伪元素动画](#user-content-pseudo-element-animation)
 	* [:checked与兄弟选择符一起使用的bug](#user-content-checked-sibling-bug)
 	* [为什么flex布局不生效](#user-content-flex)
@@ -89,6 +90,12 @@ textarea {
 如上代码，`-webkit-transform: translate(0, 0) translatez(0)` 将会导致圆角无法包裹住 `background-color`。
 
 当然，`-webkit-transform: translate3d(0, 0, 0)` 也是一样的，所以如果你的某个场景是这样的，那么可以直接使用 `-webkit-transform: translate(0, 0)` 来避免这个问题。
+
+
+<a name="background-overflow"></a>
+### 边框圆角致背景溢出
+
+
 
 
 <a name="pseudo-element-animation"></a>
