@@ -95,7 +95,7 @@ textarea {
 <a name="background-overflow"></a>
 ### 边框圆角致背景溢出
 
-
+在红米手机和OPPO手机（还有更多的手机）的 `Android Webview` 中，如果一个元素定义了 `border` + `border-radius`，这时如果该元素有背景，那么背景将会溢出圆角之外。
 
 
 <a name="pseudo-element-animation"></a>
