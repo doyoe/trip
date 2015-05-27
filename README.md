@@ -97,7 +97,9 @@ textarea {
 
 在红米和OPPO等手机某些版本的 `Android Webview` 中，如果一个元素定义了 `border` + `border-radius`，这时如果该元素有背景，那么背景将会溢出圆角之外。
 
-之所以会出现这个问题：其主要原因是因为CSS对背景裁剪（background-clip）有不同的处理方式，通常它可以是 `border-box | padding-box | content-box` 这3种方式
+之所以会出现这个问题：其主要原因是因为CSS对背景裁剪（background-clip）有不同的处理方式，通常它可以是 `border-box | padding-box | content-box` 这3种方式。
+
+待续。。。
 
 
 <a name="pseudo-element-animation"></a>
