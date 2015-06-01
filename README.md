@@ -103,8 +103,6 @@ textarea {
 
 对于上述无法裁减边框之外背景的手机，将值定义为 `padding-box | content-box` 都能fix这问题，不过更推荐使用 `padding-box`。因为使用 `content-box`，如果定义了 `padding` 不为 `0`，背景将无法铺满元素。
 
-待续。。。
-
 
 <a name="pseudo-element-animation"></a>
 ### 不要使用伪元素动画
