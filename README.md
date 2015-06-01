@@ -265,7 +265,7 @@ html {
 2. 开启邮件发送：
 
 ```
-<a mailto:dooyoe@gmail.com>dooyoe@gmail.com</a>
+<a href="mailto:dooyoe@gmail.com">dooyoe@gmail.com</a>
 ```
 
 > 如果想同时关闭电话和邮箱识别，可以把它们写到一条 meta 内，代码如下：
