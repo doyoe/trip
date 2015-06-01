@@ -99,6 +99,10 @@ textarea {
 
 之所以会出现这个问题：其主要原因是因为CSS对背景裁剪（background-clip）有不同的处理方式，通常它可以是 `border-box | padding-box | content-box` 这3种方式。
 
+浏览器的默认裁减方式是 `border-box`，即溢出 `border` 之外的背景都将被裁减。
+
+对于上述无法裁减边框之外背景的手机，将值定义为 `padding-box | content-box` 都能fix这问题，不过更推荐使用 `padding-box`。因为使用 `content-box`，如果定义了 `padding` 不为 `0`，背景将无法铺满元素。
+
 待续。。。
 
 
