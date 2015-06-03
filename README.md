@@ -17,7 +17,7 @@
 	* [清除iOS输入框内阴影](#user-content-input-shadow)
 	* [Samsung S4圆角Bug](#user-content-s4-radius)
 	* [边框圆角致背景溢出](#user-content-background-overflow)
-	* [百分比圆角失效](#user-content-border-radius-percentage)
+	* [一个失败的圆（圆角）](#user-content-border-radius-percentage)
 	* [不要使用伪元素动画](#user-content-pseudo-element-animation)
 	* [:checked与兄弟选择符一起使用的bug](#user-content-checked-sibling-bug)
 	* [为什么flex布局不生效](#user-content-flex)
@@ -106,7 +106,7 @@ textarea {
 
 
 <a name="border-radius-percentage"></a>
-### 一个失败的圆
+### 一个失败的圆（圆角）
 
 在移动平台上开发时，用CSS画一个圆很简单，只需要一句代码：
 ```
