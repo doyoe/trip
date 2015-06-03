@@ -106,7 +106,7 @@ textarea {
 
 
 <a name="border-radius-percentage"></a>
-### 百分比圆角失效
+### 一个失败的圆
 
 在移动平台上开发时，用CSS画一个圆很简单，只需要一句代码：
 ```
