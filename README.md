@@ -109,10 +109,19 @@ textarea {
 ### 百分比圆角失效
 
 在移动平台上开发时，用CSS画一个圆很简单，只需要一句代码：
-
 ```
 .circle {
 	border-radius: 50%;
+}
+```
+不过，在 `Android Browser2.*` 上，这个定义将会失效，显示为默认的矩形。
+
+因为 `Android Browser2.*` 不支持以 `百分比` 作为 `border-radius` 的值，所以如果你需要兼容 `Android Browser2.*`，那么你可以这样：
+```
+.circle {
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
 }
 ```
 
