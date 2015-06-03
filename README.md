@@ -114,16 +114,17 @@ textarea {
 	border-radius: 50%;
 }
 ```
-不过，在 `Android Browser2.*` 上，这个定义将会失效，显示为默认的矩形。
+不过，在 `Android Browser2.*` 上，这个定义将会失效，而显示为默认的矩形。
 
 因为 `Android Browser2.*` 不支持以 `百分比` 作为 `border-radius` 的值，所以如果你需要兼容 `Android Browser2.*`，那么你可以这样：
 ```
 .circle {
-	width: 100px;
-	height: 100px;
-	border-radius: 50px;
+	width: 10rem;
+	height: 10rem;
+	border-radius: 5rem;
 }
 ```
+如果你觉得这样定义不够灵活，想懒一点，那么其实可以给 `border-radius` 预设一个比较大的值，比如 `100rem`，用以避免当元素的尺寸变了，圆角半径也得跟着变，除非元素的尺寸超出了你预设的阀值。
 
 
 <a name="pseudo-element-animation"></a>
