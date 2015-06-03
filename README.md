@@ -17,6 +17,7 @@
 	* [清除iOS输入框内阴影](#user-content-input-shadow)
 	* [Samsung S4圆角Bug](#user-content-s4-radius)
 	* [边框圆角致背景溢出](#user-content-background-overflow)
+	* [百分比圆角失效](#user-content-border-radius-percentage)
 	* [不要使用伪元素动画](#user-content-pseudo-element-animation)
 	* [:checked与兄弟选择符一起使用的bug](#user-content-checked-sibling-bug)
 	* [为什么flex布局不生效](#user-content-flex)
@@ -102,6 +103,18 @@ textarea {
 浏览器的默认裁减方式是 `border-box`，即溢出 `border` 之外的背景都将被裁减。
 
 对于上述无法裁减边框之外背景的手机，将值定义为 `padding-box | content-box` 都能fix这问题，不过更推荐使用 `padding-box`。因为使用 `content-box`，如果定义了 `padding` 不为 `0`，背景将无法铺满元素。
+
+
+<a name="border-radius-percentage"></a>
+### 百分比圆角失效
+
+在移动平台上开发时，用CSS画一个圆很简单，只需要一句代码：
+
+```
+.circle {
+	border-radius: 50%;
+}
+```
 
 
 <a name="pseudo-element-animation"></a>
