@@ -246,7 +246,11 @@ html {
 <a name="shortcut-title"></a>
 ### 设置添加到主屏幕的标题
 
-`iOS Safari` 允许用户将一个网页添加到主屏幕然后像 `App` 一样来操作它。
+`iOS Safari` 允许用户将一个网页添加到主屏幕然后像 `App` 一样来操作它。我们知道每个 `App` 下方都会有一个名字，`iOS Safari` 提供了一个私有的 `meta` 来定义这个名字，代码如下：
+
+```
+<meta name="apple-mobile-web-app-title" content="Web App名称" />
+```
 
 
 <a name="tel"></a>
