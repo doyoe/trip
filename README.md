@@ -276,7 +276,7 @@ html {
 <a name="status-bar-style"></a>
 ### 添加到主屏幕时设置系统顶栏颜色
 
-当我们将一个网页添加到主屏幕时，还可以对系统的顶部状态栏颜色进行设置，前提是开启了：
+当我们将一个网页添加到主屏幕时，还可以对 `系统显示手机信号、时间、电池的顶部状态栏` 颜色进行设置，前提是开启了：
 
 ```
 <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -289,6 +289,12 @@ html {
 ```
 
 content只有3个固定值可选：default | black | black-translucent
+
+* 如果设置为 `default`，状态栏将为正常的，即白色，网页从状态栏以下开始显示；
+* 如果设置为 `black`，状态栏将为黑色，网页从状态栏以下开始显示；
+* 如果设置为 `black-translucent`，状态栏将为灰色半透明，网页将充满整个屏幕，状态栏会盖在网页之上；
+
+该设置只在 `iOS` 上有效。
 
 <a name="tel"></a>
 ### 手机号码识别
