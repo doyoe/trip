@@ -276,6 +276,20 @@ html {
 <a name="status-bar-style"></a>
 ### 添加到主屏幕时设置系统顶栏颜色
 
+当我们将一个网页添加到主屏幕时，还可以对系统的顶部状态栏颜色进行设置，前提是开启了：
+
+```
+<meta name="apple-mobile-web-app-capable" content="yes" />
+```
+
+有了这个前提，你可以通过下面的方式来进行定义：
+
+```
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+```
+
+content只有3个固定值可选：default | black | black-translucent
+
 <a name="tel"></a>
 ### 手机号码识别
 
