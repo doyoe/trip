@@ -258,6 +258,8 @@ html {
 <title>Web App名称</title>
 ```
 
+但如果你想要网页标题和App名字不一样的话，那就只有iOS才行。
+
 <a name="tel"></a>
 ### 手机号码识别
 
