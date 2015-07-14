@@ -28,6 +28,7 @@
 	* [快速回弹滚动](#user-content-overflow-scrolling)
 	* [设置添加到主屏幕的标题](#user-content-shortcut-title)
 	* [添加到主屏幕时隐藏地址栏和状态栏](#user-content-hide-bar)
+	* [添加到主屏幕时设置系统顶栏颜色](#user-content-status-bar-style)
 	* [手机号码识别](#user-content-tel)
 	* [邮箱地址识别](#user-content-email)
 	* [关闭iOS键盘首字母自动大写](#user-content-autocapitalize)
@@ -271,6 +272,9 @@ html {
 ```
 
 该方案在 `iOS` 和 `Android` 上都通用。
+
+<a name="status-bar-style"></a>
+### 添加到主屏幕时设置系统顶栏颜色
 
 <a name="tel"></a>
 ### 手机号码识别
