@@ -26,6 +26,7 @@
 	* [取消touch高亮](#user-content-tap-highlight-color)
 	* [禁止选中内容](#user-content-user-select)
 	* [快速回弹滚动](#user-content-overflow-scrolling)
+	* [设置添加到主屏幕的标题](#user-content-shortcut-title)
 	* [手机号码识别](#user-content-tel)
 	* [邮箱地址识别](#user-content-email)
 	* [关闭iOS键盘首字母自动大写](#user-content-autocapitalize)
@@ -241,6 +242,12 @@ html {
 	-webkit-overflow-scrolling: touch;
 }
 ```
+
+<a name="shortcut-title"></a>
+### 设置添加到主屏幕的标题
+
+
+
 
 <a name="tel"></a>
 ### 手机号码识别
