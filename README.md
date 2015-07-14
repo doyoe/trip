@@ -246,7 +246,7 @@ html {
 <a name="shortcut-title"></a>
 ### 设置添加到主屏幕的标题
 
-
+`iOS Safari` 允许用户将一个网页添加到主屏幕然后像 `App` 一样来操作它。
 
 
 <a name="tel"></a>
