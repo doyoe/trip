@@ -252,6 +252,11 @@ html {
 <meta name="apple-mobile-web-app-title" content="Web App名称" />
 ```
 
+`Android Chrome31.0`，`Android Browser5.0` 也开始支持添加到主屏幕了，但并没有提供相应的定义标题的方式，所以如果你想统一 `iOS` 和 `Android` 平台定义 Web app 名称的方式，可以使用 `title` 标签来定义，代码如下：
+
+```
+<title>Web App名称</title>
+```
 
 <a name="tel"></a>
 ### 手机号码识别
