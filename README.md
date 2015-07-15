@@ -272,6 +272,8 @@ html {
 <link rel="apple-touch-icon" href="app.png" />
 ```
 
+不过该方案，在拟物设计的 `iOS6及以前` 会自动为图标添加一层高光效果，`iOS7` 已使用了扁平化设计，所以如果使用该方案，在不同版本下得到的效果会不一致。
+
 该方案在 `iOS` 和 `Android` 上都通用。
 
 <a name="hide-bar"></a>
