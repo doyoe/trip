@@ -27,7 +27,7 @@
 	* [禁止选中内容](#user-content-user-select)
 	* [快速回弹滚动](#user-content-overflow-scrolling)
 	* [设置添加到主屏幕的标题](#user-content-shortcut-title)
-	* [添加到主屏幕时隐藏地址栏和状态栏](#user-content-hide-bar)
+	* [添加到主屏幕时隐藏地址栏和状态栏（即全屏）](#user-content-hide-bar)
 	* [添加到主屏幕时设置系统顶栏颜色](#user-content-status-bar-style)
 	* [手机号码识别](#user-content-tel)
 	* [邮箱地址识别](#user-content-email)
@@ -263,9 +263,9 @@ html {
 但如果你想要网页标题和App名字不一样的话，那就只有iOS才行。
 
 <a name="hide-bar"></a>
-### 添加到主屏幕时隐藏地址栏和状态栏
+### 添加到主屏幕时隐藏地址栏和状态栏（即全屏）
 
-当我们将一个网页添加到主屏幕时，会更希望它能有像 `App` 一样的表现，不显示地址栏和状态栏，代码如下：
+当我们将一个网页添加到主屏幕时，会更希望它能有像 `App` 一样的表现，没有地址栏和状态栏全屏显示，代码如下：
 
 ```
 <meta name="apple-mobile-web-app-capable" content="yes" />
