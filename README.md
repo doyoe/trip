@@ -26,7 +26,8 @@
 	* [取消touch高亮](#user-content-tap-highlight-color)
 	* [禁止选中内容](#user-content-user-select)
 	* [快速回弹滚动](#user-content-overflow-scrolling)
-	* [设置添加到主屏幕的标题](#user-content-shortcut-title)
+	* [设置添加到主屏幕的App标题](#user-content-shortcut-title)
+	* [设置添加到主屏幕的App图标](#user-content-shortcut-icon)
 	* [添加到主屏幕时隐藏地址栏和状态栏（即全屏）](#user-content-hide-bar)
 	* [添加到主屏幕时设置系统顶栏颜色](#user-content-status-bar-style)
 	* [手机号码识别](#user-content-tel)
@@ -246,7 +247,7 @@ html {
 ```
 
 <a name="shortcut-title"></a>
-### 设置添加到主屏幕的标题
+### 设置添加到主屏幕的App标题
 
 `iOS Safari` 允许用户将一个网页添加到主屏幕然后像 `App` 一样来操作它。我们知道每个 `App` 下方都会有一个名字，`iOS Safari` 提供了一个私有的 `meta` 来定义这个名字，代码如下：
 
@@ -261,6 +262,17 @@ html {
 ```
 
 但如果你想要网页标题和App名字不一样的话，那就只有iOS才行。
+
+<a name="shortcut-icon"></a>
+### 设置添加到主屏幕的App图标
+
+当我们将一个网页添加到主屏幕时，除了会需要设置标题之外，肯定还需要能够自定义这个App的图标，代码如下：
+
+```
+<link rel="apple-touch-icon" href="app.png" />
+```
+
+该方案在 `iOS` 和 `Android` 上都通用。
 
 <a name="hide-bar"></a>
 ### 添加到主屏幕时隐藏地址栏和状态栏（即全屏）
