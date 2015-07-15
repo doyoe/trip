@@ -274,6 +274,12 @@ html {
 
 不过该方案，在拟物设计的 `iOS6及以前` 会自动为图标添加一层高光效果，`iOS7` 已使用了扁平化设计，所以如果使用该方案，在不同版本下得到的效果会不一致。
 
+当然，你也可以使用原图作为App的图标，用以保持各平台表现一致，代码如下：
+
+```
+<link rel="apple-touch-icon-precomposed" href="app.png" />
+```
+
 该方案在 `iOS` 和 `Android` 上都通用。
 
 <a name="hide-bar"></a>
