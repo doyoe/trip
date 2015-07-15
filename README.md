@@ -280,6 +280,21 @@ html {
 <link rel="apple-touch-icon-precomposed" href="app.png" />
 ```
 
+如果你想给不同的设备定不同的图标，可以通过 `sizes` 属性来定义，形如：
+
+```
+<link rel="apple-touch-icon" sizes="76x76" href="ipad.png@1x" />
+<link rel="apple-touch-icon" sizes="120x120" href="iphone-retina@2x.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="ipad-retina@2x.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="iphone-retina@3x.png" />
+```
+
+规则如下：
+
+* 如果没有跟相应设备推荐尺寸一致的图标，会优先选择比推荐尺寸大并且最接近推荐尺寸的图标。
+* 如果没有比推荐尺寸大的图标，会优先选择最接近推荐尺寸的图标。
+* 如些有多个图标符合推荐尺寸，会优先选择包含关键字precomposed的图标。
+
 该方案在 `iOS` 和 `Android` 上都通用。
 
 <a name="hide-bar"></a>
