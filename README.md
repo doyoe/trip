@@ -242,7 +242,7 @@ html {
 ```
 .xxx {
 	overflow: auto; /* auto | scroll */
-	-webkit-overflow-scrolling: touch;
+	-webkit-overflow-scrolling: touch; /* 该规则可能引起iOS UIWebView奔溃 */
 }
 ```
 
