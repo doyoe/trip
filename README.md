@@ -30,7 +30,7 @@
 	* [设置添加到主屏幕的App图标](#user-content-shortcut-icon)
 	* [添加到主屏幕时隐藏地址栏和状态栏（即全屏）](#user-content-hide-bar)
 	* [添加到主屏幕时设置系统顶栏颜色](#user-content-status-bar-style)
-	* [手机号码识别](#user-content-tel)
+	* [电话号码识别](#user-content-tel)
 	* [邮箱地址识别](#user-content-email)
 	* [关闭iOS键盘首字母自动大写](#user-content-autocapitalize)
 	* [关闭iOS输入自动修正](#user-content-autocorrect)
@@ -297,7 +297,7 @@ html {
 
 实际情况下，大部分智能手机都接近或者已经达到视网膜屏质量，所以如果想省事的话，可以分别为 `iPhone` 和 `iPad` 定义一种高质量的 `icon` 即可。
 
-该方案在 `iOS` 和 `Android` 上都通用。
+该方案在 `iOS` 和 `Android5.0+` 上都通用。
 
 <a name="hide-bar"></a>
 ### 添加到主屏幕时隐藏地址栏和状态栏（即全屏）
@@ -308,7 +308,7 @@ html {
 <meta name="apple-mobile-web-app-capable" content="yes" />
 ```
 
-该方案在 `iOS` 和 `Android` 上都通用。
+该方案在 `iOS` 和 `Android5.0+` 上都通用。
 
 <a name="status-bar-style"></a>
 ### 添加到主屏幕时设置系统顶栏颜色
@@ -334,7 +334,7 @@ content只有3个固定值可选：default | black | black-translucent
 该设置只在 `iOS` 上有效。
 
 <a name="tel"></a>
-### 手机号码识别
+### 电话号码识别
 
 在 `iOS Safari` （其他浏览器和Android均不会）上会对那些看起来像是电话号码的数字处理为电话链接，比如：
 
@@ -345,19 +345,19 @@ content只有3个固定值可选：default | black | black-translucent
 
 可能还有其他类型的数字也会被识别，但在具体的业务场景中，有些时候这是不必须的，所以你可以关闭电话自动识别，然后在需要拨号的地方，开启电话呼出和短信功能。
 
-1. 关闭电话识别：
+1. 关闭电话号码识别：
 
 ```
 <meta name="format-detection" content="telephone=no" />
 ```
 
-2. 开启电话功能：
+2. 开启拨打电话功能：
 
 ```
 <a href="tel:123456">123456</a>
 ```
 
-3. 开启短信功能：
+3. 开启发送短信功能：
 
 ```
 <a href="sms:123456">123456</a>
