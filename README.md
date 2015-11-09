@@ -21,7 +21,7 @@
 	* [不要使用伪元素动画](#user-content-pseudo-element-animation)
 	* [:checked与兄弟选择符一起使用的bug](#user-content-checked-sibling-bug)
 	* [为什么flex布局不生效](#user-content-flex)
-	* [为什么10px像素字体不生效](#user-content-12px)
+	* [为什么小于12px字号不生效](#user-content-12px)
 * [经验](#user-content-experience)
 	* [禁止保存或拷贝图像](#user-content-touch-callout)
 	* [取消touch高亮](#user-content-tap-highlight-color)
@@ -193,7 +193,7 @@ input:checked + .test {
 > `Android Browser4.3及以下`，`iOS Safari6.1及以下` 的 `flex子项` 如果没有显式的定义 `height` 为非 `auto` 的值，那么子项分配父元素剩余空间时将会不符合标准预期；
 
 <a name="12px"></a>
-### 为什么10px像素字体不生效
+### 为什么小于12px字号不生效
 
 如果你是从`pc`开发转到移动平台的，或者应该记得在`pc`端，`Chrome`及后来加入Webkit阵营的`Opera`都不支持页面字号小于`12px`，当然你可以通过更改浏览器设置来改变这一情况，然后这并没有什么卵用，不是么？
 
