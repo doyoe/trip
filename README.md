@@ -214,8 +214,15 @@ input:checked + .test {
 假设我们有如下代码：
 
 ```css
-
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.4rem;
+}
 ```
+
+此时，我们预期 `body` 的 `font-size` 为 `14px`，因为大部分浏览器的默认字号都是 `16px`。
 
 <a name="experience"></a>
 ## 经验
