@@ -23,6 +23,7 @@
 	* [为什么flex布局不生效](#user-content-flex)
 	* [为什么小于12px字号不生效](#user-content-12px)
 	* [chrome中body使用rem失效](#user-content-chrome-rem-bug)
+	* [不要对html设置百分比大小的字号](#user-content-html-percent-font-size)
 * [经验](#user-content-experience)
 	* [禁止保存或拷贝图像](#user-content-touch-callout)
 	* [取消touch高亮](#user-content-tap-highlight-color)
@@ -236,6 +237,45 @@ body {
 ```
 
 由于 `body` 是 `html` 的直接子元素，所以此时对 `body` 使用 `em` 与 `rem` 的效果是相同的。
+
+<a name="html-percent-font-size"></a>
+### 不要对html设置百分比字号
+
+很严肃的和大家说，如果你在使用 `rem` 这项技术，那么尽可能不要对html设置百分比大小的字号。比如这样的：
+
+```css
+html {
+  font-size: 62.5%;
+}
+```
+
+由于大部分浏览器的默认字号是 `16px`，所以能计算出 `html` 的字号实际为 `10px`。我们在 [为什么小于12px字号不生效](#user-content-12px) 中说过，部分浏览器会将小于 `12px` 的字变成 `12px` 来显示。那么此时，在这些浏览器下，如果我做了这样的定义：
+
+```css
+.demo {
+	width: 10rem;
+}
+```
+
+你预期得到 `10px * 10rem = 100px`，但实际上得到的确是 `12px * 10rem = 120px`。这是非常大的错误，我们应当尽量避免。
+
+与此同时，虽然大部分浏览器的默认字号是 `16px`，但仍然有使用其它默认值的浏览器，比如我依稀记得 `firefox` 使用了 `15px`。**而且最重要的是，用户是可以改变浏览器默认字号的**。
+
+所以不要对html设置百分比字号，尤其是不要对它使用计算值比 `12px` 小的字号。我推荐大家这样做：
+
+```css
+html {
+  font-size: 100px;
+}
+```
+
+以 `100px` 作为因子，计算也非常方便。如果你想要设置一个元素的宽度是 `20px`，那么只需要：
+
+```css
+.demo {
+	width: .2rem;
+}
+```
 
 <a name="experience"></a>
 ## 经验
