@@ -207,6 +207,8 @@ input:checked + .test {
 <a name="chrome-rem-bug"></a>
 ### chrome中body使用rem失效
 
+我知道很多人已经开始使用 `rem` 作为项目中的单位了。但是遗憾的是，在 `Chrome` 和 `Opera` 上，如果我们给 `body` 元素应用了 `rem`，那么这个取值将会计算错误。
+
 <a name="experience"></a>
 ## 经验
 
