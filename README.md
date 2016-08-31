@@ -58,7 +58,7 @@
 
 iOS上的几乎任何浏览器输入框（input, textarea）默认有内部阴影，但无法使用 `box-shadow` 来清除，如果不需要阴影，可以这样关闭：
 
-```
+```css
 input,
 textarea {
 	/* 方法1: 去掉边框 */
@@ -78,8 +78,7 @@ textarea {
 
 `Samsung S4` 手机在 `Android Browser4.4.2` 上（其他版本未测），如果你使用了 `border-radius`，并且使用了 `-webkit-transform` 属性，当使用了 `translatez` 或者 `translate3d` 值，圆角会出现问题：
 
-```
-<style>
+```css
 .test {
 	border: 2px solid red;
 	width: 50px;
@@ -90,7 +89,8 @@ textarea {
 	-webkit-transform: translate(0, 0) translatez(0);
 	transform: translate(0, 0) translatez(0);
 }
-</style>
+```
+```html
 <div class="test"></div>
 ```
 
@@ -115,7 +115,8 @@ textarea {
 ### 一个失败的圆（圆角）
 
 在移动平台上开发时，用CSS画一个圆很简单，只需要一句代码：
-```
+
+```css
 .circle {
 	border-radius: 50%;
 }
@@ -123,7 +124,8 @@ textarea {
 不过，在 `Android Browser2.*` 上，这个定义将会失效，而显示为默认的矩形。
 
 因为 `Android Browser2.*` 不支持以 `百分比` 作为 `border-radius` 的值，所以如果你需要兼容 `Android Browser2.*`，那么你可以这样：
-```
+
+```css
 .circle {
 	width: 10rem;
 	height: 10rem;
@@ -149,7 +151,7 @@ textarea {
 
 在 `Android Browser4.2.*及以下`（可能版本稍有出入）（包括坑爹的Flyme），如果你有这样一段代码：
 
-```
+```css
 input:checked ~ .test {
   background-color: #f00;
 }
@@ -159,7 +161,7 @@ input:checked ~ .test {
 
 第一种，使用 `input` 和 `+` 进行激活：
 
-```
+```css
 html + input {}
 input:checked ~ .test {
   background-color: #f00;
@@ -170,7 +172,7 @@ input:checked ~ .test {
 
 第二种，直接换成 `+`：
 
-```
+```css
 input:checked + .test {
   background-color: #f00;
 }
@@ -209,6 +211,12 @@ input:checked + .test {
 
 我知道很多人已经开始使用 `rem` 作为项目中的单位了。但是遗憾的是，在 `Chrome` 和 `Opera` 上，如果我们给 `body` 元素应用了 `rem`，那么这个取值将会计算错误。
 
+假设我们有如下代码：
+
+```css
+
+```
+
 <a name="experience"></a>
 ## 经验
 
@@ -217,7 +225,7 @@ input:checked + .test {
 
 通常当你在手机或者pad上长按图像 `img` ，会弹出选项 `存储图像` 或者 `拷贝图像`，如果你不想让用户这么操作，那么你可以通过以下方法来禁止：
 
-```
+```html
 img {
 	-webkit-touch-callout: none;
 }
@@ -230,7 +238,7 @@ img {
 
 在移动设备上，所有设置了伪类 `:active` 的元素，默认都会在激活状态时，显示高亮框，如果不想要这个高亮，那么你可以通过以下方法来禁止：
 
-```
+```css
 .xxx {
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -241,7 +249,7 @@ img {
 
 如果你不想用户可以选中页面中的内容，那么你可以禁掉：
 
-```
+```html
 html {
 	-webkit-user-select: none;
 }
@@ -257,7 +265,7 @@ html {
 
 在iOS上如果你想让一个元素拥有像 Native 的滚动效果，你可以这样做：
 
-```
+```css
 .xxx {
 	overflow: auto; /* auto | scroll */
 	-webkit-overflow-scrolling: touch; /* 该规则可能引起iOS UIWebView崩溃 */
@@ -269,13 +277,13 @@ html {
 
 `iOS Safari` 允许用户将一个网页添加到主屏幕然后像 `App` 一样来操作它。我们知道每个 `App` 下方都会有一个名字，`iOS Safari` 提供了一个私有的 `meta` 来定义这个名字，代码如下：
 
-```
+```html
 <meta name="apple-mobile-web-app-title" content="Web App名称" />
 ```
 
 `Android Chrome31.0`，`Android Browser5.0` 也开始支持添加到主屏幕了，但并没有提供相应的定义标题的方式，所以如果你想统一 `iOS` 和 `Android` 平台定义 Web app 名称的方式，可以使用 `title` 标签来定义，代码如下：
 
-```
+```html
 <title>Web App名称</title>
 ```
 
@@ -286,7 +294,7 @@ html {
 
 当我们将一个网页添加到主屏幕时，除了会需要设置标题之外，肯定还需要能够自定义这个App的图标，代码如下：
 
-```
+```html
 <link rel="apple-touch-icon" href="app.png" />
 ```
 
@@ -294,13 +302,13 @@ html {
 
 当然，你也可以使用原图作为App的图标，用以保持各平台表现一致，代码如下：
 
-```
+```html
 <link rel="apple-touch-icon-precomposed" href="app.png" />
 ```
 
 如果你想给不同的设备定不同的图标，可以通过 `sizes` 属性来定义，形如：
 
-```
+```html
 <link rel="apple-touch-icon" sizes="76x76" href="ipad.png@1x" />
 <link rel="apple-touch-icon" sizes="120x120" href="iphone-retina@2x.png" />
 <link rel="apple-touch-icon" sizes="152x152" href="ipad-retina@2x.png" />
@@ -322,7 +330,7 @@ html {
 
 当我们将一个网页添加到主屏幕时，会更希望它能有像 `App` 一样的表现，没有地址栏和状态栏全屏显示，代码如下：
 
-```
+```html
 <meta name="apple-mobile-web-app-capable" content="yes" />
 ```
 
@@ -333,13 +341,13 @@ html {
 
 当我们将一个网页添加到主屏幕时，还可以对 `系统显示手机信号、时间、电池的顶部状态栏` 颜色进行设置，前提是开启了：
 
-```
+```html
 <meta name="apple-mobile-web-app-capable" content="yes" />
 ```
 
 有了这个前提，你可以通过下面的方式来进行定义：
 
-```
+```html
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 ```
 
@@ -365,19 +373,19 @@ content只有3个固定值可选：default | black | black-translucent
 
 1. 关闭电话号码识别：
 
-```
+```html
 <meta name="format-detection" content="telephone=no" />
 ```
 
 2. 开启拨打电话功能：
 
-```
+```html
 <a href="tel:123456">123456</a>
 ```
 
 3. 开启发送短信功能：
 
-```
+```html
 <a href="sms:123456">123456</a>
 ```
 
@@ -388,19 +396,19 @@ content只有3个固定值可选：default | black | black-translucent
 
 1. 关闭邮箱地址识别：
 
-```
+```html
 <meta name="format-detection" content="email=no" />
 ```
 
 2. 开启邮件发送：
 
-```
+```html
 <a href="mailto:dooyoe@gmail.com">dooyoe@gmail.com</a>
 ```
 
 > 如果想同时关闭电话和邮箱识别，可以把它们写到一条 meta 内，代码如下：
 
-```
+```html
 <meta name="format-detection" content="telephone=no,email=no" />
 ```
 
@@ -409,7 +417,7 @@ content只有3个固定值可选：default | black | black-translucent
 
 在iOS中，默认情况下键盘是开启首字母大写的功能的，如果业务不想出现首字母大写，可以这样：
 
-```
+```html
 <input type="text" autocapitalize="off" />
 ```
 
@@ -418,7 +426,7 @@ content只有3个固定值可选：default | black | black-translucent
 
 在iOS中，默认输入法会开启自动修正输入内容的功能，如果不需要的话，可以这样：
 
-```
+```html
 <input type="text" autocorrect="off" />
 ```
 
@@ -427,7 +435,7 @@ content只有3个固定值可选：default | black | black-translucent
 
 当移动设备横竖屏切换时，文本的大小会重新计算，进行相应的缩放，当我们不需要这种情况时，可以选择禁止：
 
-```
+```css
 html {
 	-webkit-text-size-adjust: 100%;
 }
