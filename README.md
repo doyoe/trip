@@ -225,7 +225,7 @@ input:checked + .test {
 
 通常当你在手机或者pad上长按图像 `img` ，会弹出选项 `存储图像` 或者 `拷贝图像`，如果你不想让用户这么操作，那么你可以通过以下方法来禁止：
 
-```html
+```css
 img {
 	-webkit-touch-callout: none;
 }
