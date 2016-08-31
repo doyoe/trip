@@ -249,7 +249,7 @@ img {
 
 如果你不想用户可以选中页面中的内容，那么你可以禁掉：
 
-```html
+```css
 html {
 	-webkit-user-select: none;
 }
