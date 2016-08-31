@@ -22,6 +22,7 @@
 	* [:checked与兄弟选择符一起使用的bug](#user-content-checked-sibling-bug)
 	* [为什么flex布局不生效](#user-content-flex)
 	* [为什么小于12px字号不生效](#user-content-12px)
+	* [chrome中body使用rem失效](#user-content-chrome-rem-bug)
 * [经验](#user-content-experience)
 	* [禁止保存或拷贝图像](#user-content-touch-callout)
 	* [取消touch高亮](#user-content-tap-highlight-color)
@@ -202,6 +203,9 @@ input:checked + .test {
 所以，如果希望你的程序足够安全，尽量不要定义小于12px的字号，或者换一种方式来实现。
 
 > 题外话：假设你的项目使用了`rem`，那么不要使用`10`作为换算因子，原因也如上
+
+<a name="chrome-rem-bug"></a>
+### chrome中body使用rem失效
 
 <a name="experience"></a>
 ## 经验
