@@ -38,7 +38,7 @@
 	* [关闭iOS键盘首字母自动大写](#user-content-autocapitalize)
 	* [关闭iOS输入自动修正](#user-content-autocorrect)
 	* [禁止文本缩放](#user-content-text-size-adjust)
-* 待续...
+* [性能优化](#user-content-performance)
 
 <a name="compatibility"></a>
 ## 兼容性
@@ -503,6 +503,9 @@ html {
 
 > 需要注意的是，PC端的该属性已经被移除，该属性在移动端要生效，必须设置 `meta viewport'
 
+
+<a name="performance"></a>
+## 性能优化
 
 待续啊待续。。。
 
