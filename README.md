@@ -88,6 +88,8 @@ input:disabled {
 }
 ```
 
+需要注意的是，在 `Mac` 上的 `Safari` 也有同样的问题。
+
 <a name="s4-radius"></a>
 ### Samsung S4圆角Bug
 
