@@ -80,6 +80,14 @@ textarea {
 
 在 `iOS` 上，如果将输入框 `disabled`，此时输入框内的文字颜色将比 `color` 所定义的要浅，并且无法通过给输入框的伪类 `:disabled` 定义 `color` 来修正。
 
+想解决这个问题，可以作如下设置，定义输入框的文本填充色：
+
+```css
+input:disabled {
+	-webkit-text-fill-color: #000;
+}
+```
+
 <a name="s4-radius"></a>
 ### Samsung S4圆角Bug
 
