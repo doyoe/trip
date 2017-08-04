@@ -78,7 +78,7 @@ textarea {
 <a name="input-disabled"></a>
 ### 修正iOS输入框禁用文本色
 
-待续。。。
+在 `iOS` 上，如果将输入框 `disabled`，此时文本框内的文字颜色将比 `color` 所定义的要浅
 
 <a name="s4-radius"></a>
 ### Samsung S4圆角Bug
