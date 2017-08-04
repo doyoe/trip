@@ -15,6 +15,7 @@
 * [兼容性](#user-content-compatibility)
 	* [CSS伪类:active](#user-content-active)
 	* [清除iOS输入框内阴影](#user-content-input-shadow)
+	* [修正iOS输入框禁用文本色](#user-content-input-disabled)
 	* [Samsung S4圆角Bug](#user-content-s4-radius)
 	* [边框圆角致背景溢出](#user-content-background-overflow)
 	* [一个失败的圆（圆角）](#user-content-border-radius-percentage)
@@ -73,6 +74,11 @@ textarea {
 	appearance: none;
 }
 ```
+
+<a name="input-disabled"></a>
+### 修正iOS输入框禁用文本色
+
+待续。。。
 
 <a name="s4-radius"></a>
 ### Samsung S4圆角Bug
